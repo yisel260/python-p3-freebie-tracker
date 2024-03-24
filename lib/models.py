@@ -36,8 +36,8 @@ class Freebie(Base):
     id = Column(Integer(), primary_key=True)
     item_name= Column(String())
     value = Column(Integer())
-    company_id = Column(Integer(), ForeignKey("company.id"))
-    dev_id = Column(Integer(), ForeignKey("dev.id"))
+    company_id = Column(Integer(), ForeignKey("companies.id"))
+    dev_id = Column(Integer(), ForeignKey("devs.id"))
 
     def __repr__(self):
         return f'<Freebie {self.item_name}, Value {self.value}>'
